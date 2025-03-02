@@ -164,10 +164,10 @@
           lze
           lzextras
           vim-repeat
-          plenary-nvim
+          # plenary-nvim
           nvim-notify
           oil-nvim
-          nvim-web-devicons
+          # nvim-web-devicons
           mini-nvim
           snacks-nvim
           nui-nvim
