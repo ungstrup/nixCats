@@ -115,6 +115,8 @@
           fd
           stdenv.cc.cc
           lazygit
+          luajit
+          luafilesystem
         ];
         # these names are arbitrary.
         lint = [
@@ -164,10 +166,10 @@
           lze
           lzextras
           vim-repeat
-          # plenary-nvim
+          plenary-nvim
           nvim-notify
           oil-nvim
-          # nvim-web-devicons
+          nvim-web-devicons
           mini-nvim
           snacks-nvim
           nui-nvim
