@@ -14,7 +14,7 @@ require('lze').load {
     -- when their filetype trigger loads them
     lsp = function(plugin)
       -- in this case, just extend some default arguments with the ones provided in the lsp table
-      require('lspconfig')[plugin.name].setup(vim.tbl_extend("force", {
+      require('lspconfig')[plugin.name].setup(vim.tbl_extend("force",{
         capabilities = require('myLuaConf.LSPs.caps-on_attach').get_capabilities(plugin.name),
         on_attach = require('myLuaConf.LSPs.caps-on_attach').on_attach,
       }, plugin.lsp or {}))
@@ -139,79 +139,6 @@ require('lze').load {
             }
           }
         }
-      },
-    },
-  },
-  {
-    "marksman",
-    for_cat = "general.markdown",
-    lsp = {
-      filetypes = { "markdown", "markdown.mdx" },
-    },
-  },
-  {
-    "tailwindcss",
-    for_cat = "web.tailwindcss",
-    lsp = {
-    },
-  },
-  {
-    "ts_ls",
-    for_cat = "web.JS",
-    lsp = {
-      filetypes = {
-        "javascript",
-        "javascriptreact",
-        "javascript.jsx",
-        "typescript",
-        "typescriptreact",
-        "typescript.tsx",
-      },
-    },
-  },
-  {
-    "htmx",
-    for_cat = "web.HTMX",
-    lsp = {
-    },
-  },
-  {
-    "cssls",
-    for_cat = "web.HTML",
-    lsp = {
-      filetypes = { "css", "scss", "less" },
-    },
-  },
-  {
-    "eslint",
-    for_cat = "web.HTML",
-    lsp = {
-    },
-  },
-  {
-    "jsonls",
-    for_cat = "web.HTML",
-    lsp = {
-      filetypes = { "json", "jsonc" },
-    },
-  },
-  {
-    "html",
-    for_cat = "web.HTML",
-    lsp = {
-      filetypes = { 'html', 'twig', 'hbs', 'templ' },
-      settings = {
-        html = {
-          format = {
-            templating = true,
-            wrapLineLength = 120,
-            wrapAttributes = 'auto',
-          },
-          hover = {
-            documentation = true,
-            references = true,
-          },
-        },
       },
     },
   },

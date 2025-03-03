@@ -7,13 +7,13 @@ require('lze').load {
     -- ft = "",
     -- keys = "",
     -- colorscheme = "",
-    after = function(plugin)
+    after = function (plugin)
       require('lint').linters_by_ft = {
         -- NOTE: download some linters in lspsAndRuntimeDeps
         -- and configure them here
         -- markdown = {'vale',},
-        javascript = { 'eslint' },
-        typescript = { 'eslint' },
+        -- javascript = { 'eslint' },
+        -- typescript = { 'eslint' },
       }
 
       vim.api.nvim_create_autocmd({ "BufWritePost" }, {
