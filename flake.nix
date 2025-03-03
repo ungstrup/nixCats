@@ -335,24 +335,6 @@
       extraLuaPackages = {
         general = [ (_:[]) ];
       };
-
-      # see :help nixCats.flake.outputs.categoryDefinitions.default_values
-      # this will enable test.default and debug.default
-      # if any subcategory of test or debug is enabled
-      # WARNING: use of categories argument in this set will cause infinite recursion
-      # The categories argument of this function is the FINAL value.
-      # You may use it in any of the other sets.
-      extraCats = {
-        test = [
-          [ "test" "default" ]
-        ];
-        debug = [
-          [ "debug" "default" ]
-        ];
-        go = [
-          [ "debug" "go" ] # yes it has to be a list of lists
-        ];
-      };
     };
 
 
