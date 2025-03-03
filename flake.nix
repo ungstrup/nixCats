@@ -115,8 +115,6 @@
           fd
           stdenv.cc.cc
           lazygit
-          luajit
-          luafilesystem
         ];
         # these names are arbitrary.
         lint = [
@@ -175,8 +173,8 @@
           nui-nvim
           nvim-nio
           otter-nvim
-          flash-nvim
-          yazi-nvim
+          # flash-nvim
+          # yazi-nvim
           nvim-autopairs
         ];
         # You can retreive information from the
