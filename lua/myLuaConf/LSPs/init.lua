@@ -142,4 +142,77 @@ require('lze').load {
       },
     },
   },
+  {
+    "marksman",
+    for_cat = "general.markdown",
+    lsp = {
+      filetypes = { "markdown", "markdown.mdx" },
+    },
+  },
+  {
+    "tailwindcss",
+    for_cat = "web.tailwindcss",
+    lsp = {
+    },
+  },
+  {
+    "ts_ls",
+    for_cat = "web.JS",
+    lsp = {
+      filetypes = {
+        "javascript",
+        "javascriptreact",
+        "javascript.jsx",
+        "typescript",
+        "typescriptreact",
+        "typescript.tsx",
+      },
+    },
+  },
+  {
+    "htmx",
+    for_cat = "web.HTMX",
+    lsp = {
+    },
+  },
+  {
+    "cssls",
+    for_cat = "web.HTML",
+    lsp = {
+      filetypes = { "css", "scss", "less" },
+    },
+  },
+  {
+    "eslint",
+    for_cat = "web.HTML",
+    lsp = {
+    },
+  },
+  {
+    "jsonls",
+    for_cat = "web.HTML",
+    lsp = {
+      filetypes = { "json", "jsonc" },
+    },
+  },
+  {
+    "html",
+    for_cat = "web.HTML",
+    lsp = {
+      filetypes = { 'html', 'twig', 'hbs', 'templ' },
+      settings = {
+        html = {
+          format = {
+            templating = true,
+            wrapLineLength = 120,
+            wrapAttributes = 'auto',
+          },
+          hover = {
+            documentation = true,
+            references = true,
+          },
+        },
+      },
+    },
+  },
 }

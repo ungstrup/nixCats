@@ -85,7 +85,7 @@ require('nixCatsUtils.catPacker').setup({
   { 'nvim-lualine/lualine.nvim', opt = true, },
   { 'lukas-reineke/indent-blankline.nvim', opt = true, },
   { 'numToStr/Comment.nvim', opt = true, as = "comment.nvim", },
-  { 'kylechui/nvim-surround', opt = true, },
+  -- { 'kylechui/nvim-surround', opt = true, },
   {
     "iamcco/markdown-preview.nvim",
     build = ":call mkdp#util#install()",

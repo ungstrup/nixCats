@@ -182,6 +182,9 @@
             flash-nvim
             yazi-nvim
             nvim-autopairs
+            dropbar-nvim
+            bufferline-nvim
+            todo-comments-nvim
           ];
         };
         # You can retreive information from the
@@ -195,6 +198,7 @@
               "catppuccin-mocha" = catppuccin-nvim;
               "tokyonight" = tokyonight-nvim;
               "tokyonight-day" = tokyonight-nvim;
+              "rose-pine" = rose-pine;
             }
           );
          # This is obviously a fairly basic usecase for this, but still nice.
@@ -270,7 +274,7 @@
             vim-sleuth
             vim-fugitive
             vim-rhubarb
-            nvim-surround
+            # nvim-surround
           ];
           extra = [
             fidget-nvim
@@ -362,7 +366,7 @@
           # or, whatever you named the package definition in the packageDefinitions set.
           # WARNING: MAKE SURE THESE DONT CONFLICT WITH OTHER INSTALLED PACKAGES ON YOUR PATH
           # That would result in a failed build, as nixos and home manager modules validate for collisions on your path
-          aliases = [ "nixCats" ];
+          aliases = [ "nixCat" ];
 
           # explained below in the `regularCats` package's definition
           # OR see :help nixCats.flake.outputs.settings for all of the settings available
@@ -385,7 +389,7 @@
           # go = true; # <- disabled but you could enable it with override or module on install
           # see :help nixCats
           themer = true;
-          colorscheme = "catppuccin-mocha";
+          colorscheme = "rose-pine";
         };
         extra = {
           # to keep the categories table from being filled with non category things that you want to pass

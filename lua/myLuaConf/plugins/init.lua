@@ -67,6 +67,10 @@ require('lze').load {
   { import = "myLuaConf.plugins.telescope", },
   { import = "myLuaConf.plugins.treesitter", },
   { import = "myLuaConf.plugins.completion", },
+  { import = "myLuaConf.plugins.yazi", },
+  { import = "myLuaConf.plugins.bufferline", },
+  { import = "myLuaConf.plugins.flash", },
+  { import = "myLuaConf.plugins.todo-comments" },
   {
     "markdown-preview.nvim",
     -- NOTE: for_cat is a custom handler that just sets enabled value for us,
@@ -112,13 +116,21 @@ require('lze').load {
       require("ibl").setup()
     end,
   },
+  -- {
+  --   "nvim-surround",
+  --   for_cat = 'general.always',
+  --   event = "DeferredUIEnter",
+  --   -- keys = "",
+  --   after = function(plugin)
+  --     require('nvim-surround').setup()
+  --   end,
+  -- },
   {
-    "nvim-surround",
+    "mini-surround",
     for_cat = 'general.always',
     event = "DeferredUIEnter",
-    -- keys = "",
     after = function(plugin)
-      require('nvim-surround').setup()
+      require('mini.surround').setup()
     end,
   },
   {
@@ -166,17 +178,32 @@ require('lze').load {
 
       require('lualine').setup({
         options = {
-          icons_enabled = false,
+          icons_enabled = true,
           theme = colorschemeName,
           component_separators = '|',
           section_separators = '',
+          always_divide_middle = true,
+          globalstatus = false,
         },
         sections = {
+          lualine_a = { 'mode' },
+          lualine_b = { 'branch', {
+            "diff",
+            },
+            "diagnostics",
+          },
           lualine_c = {
             {
               'filename', path = 1, status = true,
             },
           },
+          lualine_x = {
+            'encoding',
+            'fileformat',
+            'filetype',
+          },
+          lualine_y = { 'progress' },
+          lualine_z = { 'os.date("%R")' },
         },
         inactive_sections = {
           lualine_b = {

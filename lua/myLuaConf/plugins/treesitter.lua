@@ -12,6 +12,7 @@ return {
     load = function (name)
         vim.cmd.packadd(name)
         vim.cmd.packadd("nvim-treesitter-textobjects")
+        vim.cmd.packadd("nvim-treesitter-context")
     end,
     after = function (plugin)
       -- [[ Configure Treesitter ]]
@@ -71,6 +72,9 @@ return {
               ['<leader>A'] = '@parameter.inner',
             },
           },
+        },
+        context = {
+          enable = true,
         },
       }
     end,
