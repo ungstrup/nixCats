@@ -333,9 +333,9 @@
       # in your lua config via
       # vim.g.python3_host_prog
       # or run from nvim terminal via :!<packagename>-python3
-      extraPython3Packages = {
-        test = (_:[]);
-      };
+      # extraPython3Packages = {
+      #   test = (_:[]);
+      # };
       # populates $LUA_PATH and $LUA_CPATH
       extraLuaPackages = {
         general = [ (_:[]) ];
@@ -372,7 +372,8 @@
           # explained below in the `regularCats` package's definition
           # OR see :help nixCats.flake.outputs.settings for all of the settings available
           wrapRc = true;
-          withNodeJs = true;
+          # withNodeJs = true;
+          hosts.node.enable = true;
           configDirName = "nixCats-nvim";
           # neovim-unwrapped = inputs.neovim-nightly-overlay.packages.${pkgs.system}.neovim;
         };
