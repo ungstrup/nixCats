@@ -137,6 +137,16 @@ require('lze').load {
       require('fidget').setup({})
     end,
   },
+  {
+    "nvim-highlight-colors",
+    for_cat = 'general.extra',
+    event = "DeferredUIEnter",
+    after = function(_)
+        require("nvim-highlight-colors").setup {
+            enable_tailwind = true,
+        }
+    end,
+  },
   -- {
   --   "hlargs",
   --   for_cat = 'general.extra',

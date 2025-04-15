@@ -281,6 +281,7 @@
             fidget-nvim
             # lualine-lsp-progress
             which-key-nvim
+            nvim-highlight-colors
             # comment-nvim
             undotree
             # indent-blankline-nvim
