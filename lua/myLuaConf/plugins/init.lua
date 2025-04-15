@@ -71,6 +71,8 @@ require('lze').load {
   { import = "myLuaConf.plugins.bufferline", },
   { import = "myLuaConf.plugins.flash", },
   { import = "myLuaConf.plugins.todo-comments" },
+  { import = "myLuaConf.plugins.mini" },
+  { import = "myLuaConf.plugins.snacks" },
   {
     "markdown-preview.nvim",
     -- NOTE: for_cat is a custom handler that just sets enabled value for us,
@@ -114,23 +116,6 @@ require('lze').load {
     event = "DeferredUIEnter",
     after = function(plugin)
       require("ibl").setup()
-    end,
-  },
-  -- {
-  --   "nvim-surround",
-  --   for_cat = 'general.always',
-  --   event = "DeferredUIEnter",
-  --   -- keys = "",
-  --   after = function(plugin)
-  --     require('nvim-surround').setup()
-  --   end,
-  -- },
-  {
-    "mini-surround",
-    for_cat = 'general.always',
-    event = "DeferredUIEnter",
-    after = function(plugin)
-      require('mini.surround').setup()
     end,
   },
   {
@@ -288,7 +273,7 @@ require('lze').load {
           map('n', '<leader>gb', function()
             gs.blame_line { full = false }
           end, { desc = 'git blame line' })
-          map('n', '<leader>gd', gs.diffthis, { desc = 'git diff against index' })
+          -- map('n', '<leader>gd', gs.diffthis, { desc = 'git diff against index' })
           map('n', '<leader>gD', function()
             gs.diffthis '~'
           end, { desc = 'git diff against last commit' })

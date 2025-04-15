@@ -174,15 +174,15 @@
             lzextras
             vim-repeat
             plenary-nvim
-            nvim-notify
+            # nvim-notify
             oil-nvim
-            nvim-web-devicons
+            # nvim-web-devicons
             nui-nvim
             mini-nvim
             snacks-nvim
             flash-nvim
             yazi-nvim
-            nvim-autopairs
+            # nvim-autopairs
             dropbar-nvim
             bufferline-nvim
             todo-comments-nvim
@@ -273,17 +273,17 @@
             lualine-nvim
             gitsigns-nvim
             vim-sleuth
-            vim-fugitive
-            vim-rhubarb
+            # vim-fugitive
+            # vim-rhubarb
             # nvim-surround
           ];
           extra = [
             fidget-nvim
             # lualine-lsp-progress
             which-key-nvim
-            comment-nvim
+            # comment-nvim
             undotree
-            indent-blankline-nvim
+            # indent-blankline-nvim
             vim-startuptime
             # If it was included in your flake inputs as plugins-hlargs,
             # this would be how to add that plugin in your config.
