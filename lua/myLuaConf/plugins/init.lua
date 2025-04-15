@@ -102,22 +102,22 @@ require('lze').load {
       vim.g.undotree_SplitWidth = 40
     end,
   },
-  {
-    "comment.nvim",
-    for_cat = 'general.extra',
-    event = "DeferredUIEnter",
-    after = function(plugin)
-      require('Comment').setup()
-    end,
-  },
-  {
-    "indent-blankline.nvim",
-    for_cat = 'general.extra',
-    event = "DeferredUIEnter",
-    after = function(plugin)
-      require("ibl").setup()
-    end,
-  },
+  -- {
+  --   "comment.nvim",
+  --   for_cat = 'general.extra',
+  --   event = "DeferredUIEnter",
+  --   after = function(plugin)
+  --     require('Comment').setup()
+  --   end,
+  -- },
+  -- {
+  --   "indent-blankline.nvim",
+  --   for_cat = 'general.extra',
+  --   event = "DeferredUIEnter",
+  --   after = function(plugin)
+  --     require("ibl").setup()
+  --   end,
+  -- },
   {
     "vim-startuptime",
     for_cat = 'general.extra',
