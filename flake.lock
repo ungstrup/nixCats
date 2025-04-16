@@ -2,11 +2,11 @@
   "nodes": {
     "nixCats": {
       "locked": {
-        "lastModified": 1744630245,
-        "narHash": "sha256-ytZ1ZVrlSESBAEnoXa37pojUmmpSaOyX055NC5Mp8QM=",
+        "lastModified": 1744750985,
+        "narHash": "sha256-VKM5v+N81m/DSh2bGniDucTIWOr3g/XfaFnc1lGRxe8=",
         "owner": "BirdeeHub",
         "repo": "nixCats-nvim",
-        "rev": "142b95e1b5afeed5ebdb914feb32010395b16b39",
+        "rev": "3867fbc32e446b5254583fb495b2f3dd5057a842",
         "type": "github"
       },
       "original": {
@@ -31,10 +31,27 @@
         "type": "github"
       }
     },
+    "plugins-dmacro": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1734502504,
+        "narHash": "sha256-jA8KDNDV3/4lOPxSNp3f0giNEIsubAe8dxiAYohslsg=",
+        "owner": "tani",
+        "repo": "dmacro.vim",
+        "rev": "25ab1df31d216c4ff7554c262f92b5c0c6b743f0",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tani",
+        "repo": "dmacro.vim",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "nixCats": "nixCats",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "plugins-dmacro": "plugins-dmacro"
       }
     }
   },

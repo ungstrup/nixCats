@@ -73,6 +73,7 @@ require('lze').load {
   { import = "myLuaConf.plugins.todo-comments" },
   { import = "myLuaConf.plugins.mini" },
   { import = "myLuaConf.plugins.snacks" },
+  { import = "myLuaConf.plugins.dmacro" },
   {
     "markdown-preview.nvim",
     -- NOTE: for_cat is a custom handler that just sets enabled value for us,
