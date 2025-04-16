@@ -3,7 +3,7 @@ return {
         "dmacro.vim",
         event = "DeferredUIEnter",
         config = function()
-        vim.keymap.set({ "i", "n" }, '<C-m>', '<Plug>(dmacro-play-macro)')
+        vim.keymap.set({ "i", "n" }, '<C-y>', '<Plug>(dmacro-play-macro)')
         end,
     },
 }
