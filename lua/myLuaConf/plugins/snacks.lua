@@ -4,7 +4,7 @@ return {
         event = { 'DeferredUIEnter' },
         load = function()end,
         keys = {
-            {'<c-\\>', function() Snacks.terminal() end, mode = {'n'}, desc = 'open snacks terminal' },
+            {'<leader>\\', function() Snacks.terminal() end, mode = {'n'}, desc = 'open snacks terminal' },
             {"<leader>_", function() Snacks.lazygit.open() end, mode = {"n"}, desc = 'LazyGit' },
             {"<leader>gc", function() Snacks.lazygit.log() end, mode = {"n"}, desc = 'Lazy[G]it [C]ommit log' },
             {"<leader>gl", function() Snacks.gitbrowse.open() end, mode = {"n"}, desc = '[G]oto git [L]ink' },
