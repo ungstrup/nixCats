@@ -43,6 +43,10 @@
         url = "github:tani/dmacro.vim";
         flake = false;
     };
+    "plugins-multicursor" = {
+        url = "github:jake-stewart/multicursor.nvim";
+        flake = false;
+    };
     # "plugins-hlargs" = {
     #   url = "github:m-demare/hlargs.nvim";
     #   flake = false;
@@ -286,6 +290,7 @@
             # lualine-lsp-progress
             which-key-nvim
             nvim-highlight-colors
+            pkgs.neovimPlugins.multicursor
             # comment-nvim
             undotree
             # indent-blankline-nvim
