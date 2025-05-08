@@ -66,7 +66,8 @@ end
 require('lze').load {
   -- { import = "myLuaConf.plugins.telescope", },
   { import = "myLuaConf.plugins.treesitter", },
-  { import = "myLuaConf.plugins.completion", },
+  -- { import = "myLuaConf.plugins.completion", },
+  { import = "myLuaConf.plugins.blink", },
   { import = "myLuaConf.plugins.yazi", },
   { import = "myLuaConf.plugins.bufferline", },
   { import = "myLuaConf.plugins.flash", },
