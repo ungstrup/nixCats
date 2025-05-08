@@ -122,6 +122,9 @@
           ripgrep
           fd
           lazygit
+          imagemagick
+          ueberzugpp
+          sqlite
         ];
         # these names are arbitrary.
         lint = [
