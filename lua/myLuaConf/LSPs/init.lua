@@ -12,12 +12,21 @@ require('lze').load {
     on_require = { "lspconfig" },
     -- define a function to run over all type(plugin.lsp) == table
     -- when their filetype trigger loads them
+    -- lsp = function(plugin)
+    --   -- in this case, just extend some default arguments with the ones provided in the lsp table
+    --   require('lspconfig')[plugin.name].setup(vim.tbl_extend("force",{
+    --     capabilities = require('myLuaConf.LSPs.caps-on_attach').get_capabilities(plugin.name),
+    --     on_attach = require('myLuaConf.LSPs.caps-on_attach').on_attach,
+    --   }, plugin.lsp or {}))
+    -- end,
     lsp = function(plugin)
-      -- in this case, just extend some default arguments with the ones provided in the lsp table
-      require('lspconfig')[plugin.name].setup(vim.tbl_extend("force",{
-        capabilities = require('myLuaConf.LSPs.caps-on_attach').get_capabilities(plugin.name),
-        on_attach = require('myLuaConf.LSPs.caps-on_attach').on_attach,
-      }, plugin.lsp or {}))
+        vim.lsp.config(plugin.name, plugin.lsp or {})
+        vim.lsp.enable(plugin.name)
+    end,
+    before = function(_)
+        vim.lsp.config('*', {
+            on_attach = require('myLuaConf.LSPs.caps-on_attach').on_attach,
+        })
     end,
   },
   {
