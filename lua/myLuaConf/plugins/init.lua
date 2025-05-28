@@ -200,7 +200,10 @@ require('lze').load {
             'fileformat',
             'filetype',
           },
-          lualine_y = { 'progress' },
+          lualine_y = {
+            'progress',
+            'location',
+        },
           lualine_z = { 'os.date("%R")' },
         },
         inactive_sections = {
