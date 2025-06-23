@@ -224,4 +224,11 @@ require('lze').load {
       },
     },
   },
+  {
+    "emmet-language-server",
+    for_cat = "web.HTML",
+    lsp = {
+      filetypes = { "html" },
+    },
+  },
 }
