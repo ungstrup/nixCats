@@ -141,6 +141,7 @@
           ];
           HTML = [
             vscode-langservers-extracted
+            emmet-language-server
           ];
           JS = with nodePackages; [
             typescript-language-server
