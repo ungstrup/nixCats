@@ -22,7 +22,7 @@ require('lze').load {
           -- Conform will run multiple formatters sequentially
           -- python = { "isort", "black" },
           -- Use a sub-list to run only the first available formatter
-          javascript = { { "prettierd", "prettier" } },
+          javascript = { "prettierd", "prettier" },
         },
       })
 
@@ -31,6 +31,7 @@ require('lze').load {
           lsp_fallback = true,
           async = false,
           timeout_ms = 1000,
+          stop_after_first = true,
         })
       end, { desc = "[F]ormat [F]ile" })
     end,
