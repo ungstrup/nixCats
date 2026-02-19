@@ -207,10 +207,6 @@
           (builtins.getAttr (categories.colorscheme or "onedark") {
               # Theme switcher without creating a new category
               "onedark" = onedark-nvim;
-              "catppuccin" = catppuccin-nvim;
-              "catppuccin-mocha" = catppuccin-nvim;
-              "tokyonight" = tokyonight-nvim;
-              "tokyonight-day" = tokyonight-nvim;
               "rose-pine" = rose-pine;
             }
           );
@@ -250,18 +246,8 @@
         general = with pkgs.neovimPlugins; {
           cmp = with pkgs.vimPlugins; [
             # cmp stuff
-            # nvim-cmp
             luasnip
             friendly-snippets
-            # cmp_luasnip
-            # cmp-buffer
-            # cmp-path
-            # cmp-nvim-lua
-            # cmp-nvim-lsp
-            # cmp-cmdline
-            # cmp-nvim-lsp-signature-help
-            # cmp-cmdline-history
-            # lspkind-nvim
             blink-cmp
           ];
           treesitter = [
