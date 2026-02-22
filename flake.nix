@@ -251,6 +251,7 @@
             blink-cmp
           ];
           treesitter = [
+            tree-sitter
             nvim-treesitter-textobjects
             nvim-treesitter.withAllGrammars
             nvim-treesitter-context
