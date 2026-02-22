@@ -118,6 +118,7 @@
       lspsAndRuntimeDeps = with pkgs;{
         # some categories of stuff.
         general = [
+          tree-sitter
           universal-ctags
           ripgrep
           fd
@@ -251,7 +252,6 @@
             blink-cmp
           ];
           treesitter = [
-            tree-sitter
             nvim-treesitter-textobjects
             nvim-treesitter.withAllGrammars
             nvim-treesitter-context
